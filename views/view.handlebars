@@ -1,0 +1,96 @@
+
+<div id ="body">
+
+<div id="comment">
+  <br>
+<span style="font-size: 25px">“{{post.title}}”</span>
+<span style="font-size: 15px"><font color="#424242">{{time_added}}</font></span>
+<p>{{post.content}}</p>
+<hr>
+</div>
+<div id="a">
+  评论区
+</div>
+
+{{#each comments}}
+<div id="content">
+  <div id="font">
+    <span>用户名{{user.username}}</span>
+    <span style="font-size: 10px">
+      <font color="#424242">&nbsp;&nbsp;&nbsp;&nbsp;{{time_added}}</font>
+    </span>
+  </div>
+  <p>{{this.content}}</p>
+  <a href="/deletee/{{this.id}}">
+    <font size="1px">Delete</font>
+  </a>
+</div>
+{{/each}}
+
+
+<hr>
+<div id="post">
+  <form method="POST" action="/topic/{{post.id}}">
+    <h3>写评论：</h3>
+    <textarea name='content' placeholder="评论"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="发送">
+  </form>
+
+</div>
+</div>
+
+<style>
+  body {
+    background-color: #dfeafa;
+    position: absolute;
+  }
+
+  #comment {
+    margin: 30px;
+    position: static;
+  }
+
+  #content {
+    margin: 40px;
+    border-bottom-style: inset;
+    position: static;
+  }
+
+  #post {
+    margin: 15px;
+    position: static;
+    margin-bottom: 100px;
+    padding-left: 200px;
+  }
+
+  #body {
+    position: relative;
+    background-color: white;
+    left: 50%;
+    margin-left: -650px;
+    width: 1300px;
+
+    border-style: outset;
+    margin-top: 30px;
+  }
+
+  #font {
+    font-size: 10px;
+    background-color: #dfeafa;
+  }
+
+  #a {
+    font-size: 30px;
+    background-color: #c1d9f7;
+    margin: 40px;
+  }
+
+  textarea {
+    width: 50%;
+    height: 6em;
+    
+    
+  }
+</style>

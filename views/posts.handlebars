@@ -1,0 +1,55 @@
+<link href="main.css" rel="stylesheet">
+<div class="biggest">
+    <div class="sub_title">
+        <ul class="sub_guide">
+            <li><a href="#">关注</a></li>
+            <li><a href="#">推荐</a></li>
+            <li><a href="#">热榜</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        {{#each posts}}
+
+        <h4><a href="/topic/{{this.id}}">{{this.title}}</a></h4>
+        <p class="time">{{this.time_added}}</p>
+        <div class="delete"> <a href="/delete/{{this.id}}">删除</a></div>
+
+        <div>
+            <p>{{limit this.content 25}}</p>
+        </div>
+        <hr>
+        {{/each}}
+    </div>
+
+    <div class="post">
+        <div class="cen-create">创作者中心</div>
+        <h5>来说点什么吧...</h5>
+        <form method="POST" action="/">
+            <input type="text" name='title' placeholder="在此处输入你的标题" required>
+            <br>
+            <br>
+
+            <textarea name='content' placeholder="在此处输入你的内容"></textarea>
+            <br>
+            <input type="submit" value="发表">
+        </form>
+    </div>
+
+    <div class="other">
+        <div class="imgs"></div>
+
+        <ul class="last_guide">
+            <li><a href="">我的收藏</a></li>
+            <li><a href="">我关注的问题</a></li>
+            <li><a href="">我的邀请</a></li>
+            <li><a href="">我的余额</a></li>
+            <li><a href="">帮助中心</a></li>
+        </ul>
+    </div>
+
+    <div class="ads">
+        广告位招租
+    </div>
+    
+</div>

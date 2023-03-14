@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>论坛</title>
+    <style>
+      
+        body {margin:0;}
+
+.lian ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #516d92;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.lian li {
+  float: left;
+}
+
+.lian li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.lian li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.sou input[type=text] {
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  font-size: 10px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+ padding: 12px 20px 12px 40px;
+ height:23px;
+ margin-top: 9px;
+ 
+}
+
+.contain{
+background-color: lightsteelblue;
+height: 90px;
+}
+h{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: 40px;
+margin-left: 140px;
+
+margin-top: 70px;
+color:royalblue;
+font-weight:bolder;
+
+}
+
+span{
+    margin-left: 50px;
+    color:rgb(33, 133, 226);
+}
+
+.root ul {
+  list-style-type: none;
+  color: white;
+  background-color:  #516d92;
+  position: absolute;
+ margin-left: 50px;
+  
+}
+.root li {
+  float: left;
+  margin-left: 100px;
+}
+
+.root{
+  background-color: #516d92 ;
+  height:100px;
+  width:100%;
+}
+.wei{
+  background-color: #516d92 ;
+  height:100px;
+  width:100%;
+  color: white;
+  text-align: center;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="lian">
+    <ul>
+   <li><a  href="#news">资讯</a></li>
+  <li><a href="#operation">合作</a></li>
+  <li><a href="#contact">联系</a></li>
+  <li><a href="#about">关于我们</a></li>
+   <li style="float:right">
+    <form class="sou">
+       <input type="text" name="search" placeholder="搜索..">
+    </form>
+
+   </li>
+   <li style="float:right"><a href="/log">登录</a></li>
+    <li style="float:right"><a href="/regi">注册</a></li>
+
+</ul>
+</div>
+
+<br><br>
+
+
+<div class="contain">
+    <br>
+<h>生活谈一谈</h>
+<span>精选</span>
+<span>生活</span>
+<span>文化</span>
+<span>科技</span>
+<span>娱乐</span>
+
+</div>
+
+
+    {{{body}}}
+
+<hr>
+<div class="ba">
+<div class="root">
+  
+    <ul>
+  <li>关于我们</li>
+  <li>在论坛工作</li>
+  <li>订阅服务</li>
+  <li>法律声明</li>
+  <li>论坛广告</li>
+  <li>帮助</li>
+    
+  </div>
+  <div class="wei">
+    <div>Copyright 2007- 2021 cyzone.cn All rights reserved 京ICP证070362号 京ICP备08103950-1号 京ICP备08103950-9号 京ICP备08103950-10号 新出发京零字第朝140005号</div>
+  <div>违法和不良信息举报电话：010-53391121 举报邮箱：db@cyzone.cn</div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
